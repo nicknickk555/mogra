@@ -1,135 +1,96 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Yellow Target Intro — an interactive journey from cone interface to moisture gradient and pruning point." />
-    <meta name="theme-color" content="#071827" />
-    <meta http-equiv="refresh" content="1; url=https://yellow-target-explorer.nicknickk555.chatgpt.site" />
-    <link rel="canonical" href="https://yellow-target-explorer.nicknickk555.chatgpt.site" />
-    <meta property="og:title" content="Yellow Target Intro" />
-    <meta property="og:description" content="Enter the living model of moisture gradients and root pruning." />
-    <meta property="og:image" content="https://yellow-target-explorer.nicknickk555.chatgpt.site/og-v2.png" />
-    <title>Yellow Target Intro</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --night: #071827;
-        --ink: #eaf7ff;
-        --cyan: #65e8ff;
-        --green: #8affbd;
-        --pink: #ff5ea8;
-        --violet: #8c62ff;
-        --amber: #f4b63f;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yellow Target Intro and the interactive Moisture Gradient & Pruning Point model.">
+  <meta name="theme-color" content="#071827">
+  <meta property="og:title" content="Yellow Target Intro">
+  <meta property="og:description" content="Enter the living mathematical model of moisture gradients and root pruning.">
+  <meta property="og:image" content="https://nicknickk555.github.io/mogra/public/og-v2.png">
+  <title>Yellow Target · Moisture Gradient Explorer</title>
+  <style>
+    :root{--ink:#0b2a4a;--muted:#627b93;--green:#109c5d;--blue:#2b9fd6;--purple:#9857ba;--amber:#f4b63f;--pink:#ff5ea8;--cyan:#65e8ff;--line:#dbe7ef;--bg:#f2f6f9;--paper:#fff;--night:#071827;--shadow:0 18px 55px rgba(24,55,82,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0,#fff,transparent 26%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.shell{width:min(1480px,calc(100% - 32px));margin:22px auto}.card{background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}.eyebrow{margin:0 0 9px;color:var(--green);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.muted{color:var(--muted)}
+    .intro-header{padding:27px 30px}.intro-header h1,.explorer-header h1{margin:0;font-size:clamp(40px,5vw,68px);line-height:.96;letter-spacing:-.06em}.intro-header>p:last-of-type,.explorer-header>p:last-of-type{margin:10px 0 0;color:var(--muted);font-size:16px}.stage-nav{display:flex;align-items:center;gap:9px;margin-top:24px}.stage-nav>span{color:var(--green);font-weight:900}.stage-button{padding:13px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:12px;font-weight:900;cursor:pointer;transition:.25s}.stage-button:hover{transform:translateY(-2px)}.stage-button.active{border-color:transparent;background:linear-gradient(115deg,#112c40,#7954e8 58%,#f0b23c);color:#fff;box-shadow:0 12px 28px rgba(84,75,160,.22)}.play-button{margin-left:auto;padding:13px 17px;border:0;border-radius:13px;background:var(--ink);color:#fff;font-size:11px;font-weight:900;cursor:pointer}
+    .portal{display:grid;grid-template-columns:1.1fr .9fr;gap:0;margin-top:16px;padding:10px}.portal-visual{position:relative;min-height:720px;overflow:hidden;border-radius:20px;background:radial-gradient(circle at 50% 45%,#19425a,#0b2237 44%,#061421 80%);isolation:isolate}.portal-visual:before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(101,232,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(101,232,255,.07) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(#000,transparent 94%)}.portal-visual:after{content:"";position:absolute;left:-20%;right:-20%;top:44%;height:1px;background:var(--cyan);box-shadow:0 0 40px 12px rgba(101,232,255,.22)}.glow{position:absolute;width:310px;height:310px;border-radius:50%;filter:blur(75px);opacity:.28}.glow.one{left:-100px;top:110px;background:#8c62ff}.glow.two{right:-100px;bottom:40px;background:#65e8ff}.model{position:absolute;z-index:3;left:50%;top:51%;width:530px;height:520px;transform:translate(-50%,-50%);transition:.65s}.cone{position:absolute;left:50%;top:190px;width:275px;height:260px;transform:translateX(-50%);clip-path:polygon(19% 0,81% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(78,203,250,.2),rgba(36,89,128,.5));filter:drop-shadow(0 22px 30px rgba(0,0,0,.36))}.cone:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 4px rgba(101,232,255,.86);clip-path:inherit}.soil{position:absolute;left:0;right:0;bottom:0;height:24%;background:linear-gradient(145deg,#8c62ff,#ff5ea8 50%,#f4b63f);box-shadow:0 0 36px rgba(255,94,168,.34);transition:height .7s}.interface{position:absolute;z-index:2;left:8%;right:8%;bottom:24%;height:4px;background:#fff;box-shadow:0 0 18px var(--cyan);transition:bottom .7s}.interface:before{content:"";position:absolute;left:50%;top:50%;width:145%;height:38px;border:2px solid var(--cyan);border-radius:50%;transform:translate(-50%,-50%);opacity:.65}.interface span{position:absolute;left:50%;top:13px;transform:translateX(-50%);color:#fff;font-size:11px;font-weight:900}.ruby{position:absolute;z-index:7;left:50%;top:72px;width:73px;height:73px;transform:translateX(-50%) rotate(45deg);border:2px solid rgba(255,255,255,.86);background:linear-gradient(135deg,#fff,#ff7db7 25%,#7c4dff 60%,#f4b63f);box-shadow:0 0 32px rgba(255,94,168,.65);opacity:.24;transition:.7s}.ruby:after{content:"";position:absolute;inset:-22px;border:1px solid rgba(255,94,168,.45);border-radius:50%;animation:pulse 2s infinite alternate}.target{position:absolute;z-index:5;left:50%;top:184px;width:108px;height:108px;display:grid;place-items:center;transform:translateX(-50%) scale(.55);border:3px solid #8affbd;border-radius:50%;background:radial-gradient(circle,#f7c149 0 17%,rgba(247,193,73,.45) 18% 42%,rgba(138,255,189,.06) 43%);box-shadow:0 0 0 18px rgba(138,255,189,.06),0 0 45px rgba(138,255,189,.22);opacity:.18;transition:.65s}.target span{color:#fff;font-size:9px;font-weight:900}.orbit{position:absolute;left:50%;top:53%;width:480px;height:185px;border:1px solid rgba(101,232,255,.32);border-radius:50%;transform:translate(-50%,-50%) rotate(-14deg);animation:orbit 13s linear infinite}.orbit:after{content:"";position:absolute;left:18%;top:-4px;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan)}.portal.stage-1 .soil,.portal.stage-2 .soil{height:50%}.portal.stage-1 .interface,.portal.stage-2 .interface{bottom:50%}.portal.stage-1 .ruby{opacity:1;transform:translateX(-50%) rotate(45deg) scale(1.12)}.portal.stage-1 .target{opacity:1;transform:translateX(-50%) scale(1)}.mini-chart{position:absolute;z-index:9;left:50%;top:50%;width:86%;padding:22px;border:1px solid rgba(101,232,255,.32);border-radius:20px;background:rgba(5,23,38,.84);box-shadow:0 24px 80px rgba(0,0,0,.45);transform:translate(-50%,-45%) scale(.85);opacity:0;transition:.7s}.mini-chart svg{width:100%;height:auto}.portal.stage-2 .model{opacity:.1;filter:blur(4px);transform:translate(-50%,-50%) scale(.8)}.portal.stage-2 .mini-chart{opacity:1;transform:translate(-50%,-45%) scale(1)}.visual-caption{position:absolute;z-index:11;left:25px;bottom:23px;color:#fff;font-size:13px;font-weight:900}.portal-copy{display:flex;flex-direction:column;padding:38px 36px 28px;animation:fade .4s}.portal-copy h2{margin:8px 0 18px;font-size:clamp(38px,4.5vw,68px);line-height:.96;letter-spacing:-.06em}.portal-copy>p:not(.eyebrow){margin:0;color:var(--muted);font-size:16px;line-height:1.7}.logic{margin-top:24px;padding:16px 18px;border:1px solid #d8d1ff;border-radius:16px;background:linear-gradient(110deg,#faf8ff,#f1fcf8);font-weight:900;font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.tags span{padding:7px 10px;border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:9px;font-weight:850}.progress{height:5px;margin-top:34px;overflow:hidden;border-radius:99px;background:#e7edf1}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--blue),var(--purple),var(--amber));transition:width .5s}.primary{display:block;margin-top:17px;padding:19px;border:0;border-radius:15px;background:linear-gradient(110deg,#0b2a4a,#245978);color:#fff;text-align:center;text-decoration:none;font-size:12px;font-weight:900;cursor:pointer;box-shadow:0 14px 30px rgba(11,42,74,.18)}.primary.final{background:linear-gradient(110deg,#7048dc,#ff579f 58%,#f5b63f)}.principle{display:flex;align-items:center;gap:13px;margin-top:auto;padding-top:30px}.principle i{width:32px;height:32px;transform:rotate(45deg);border:2px solid #fff;background:linear-gradient(135deg,#ff6bab,#7955ed 55%,#f4b63f);box-shadow:0 0 0 1px #d9d2ff}.principle p{margin:0;font-size:11px;font-weight:850}
+    .explorer{margin-top:70px;scroll-margin-top:20px}.explorer-header{padding:28px 30px}.explorer-nav{display:flex;gap:8px;margin-top:20px}.explorer-nav a{padding:8px 12px;border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:11px;font-weight:850;text-decoration:none}.workspace{display:grid;grid-template-columns:360px 1fr;gap:16px;margin-top:16px}.calculator,.graph{padding:20px}.calculator{position:sticky;top:12px;align-self:start}.calculator h2,.graph h2,.formulas h2,.conclusion h2,.appendix h2{margin:0;letter-spacing:-.035em}.calculator fieldset{margin:16px 0 0;padding:0;border:0}.calculator legend{width:100%;padding-bottom:7px;border-bottom:1px solid var(--line);color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.inputs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}.inputs label{padding:8px;border:1px solid var(--line);border-radius:12px;background:#f7fafc}.inputs label span{display:flex;justify-content:space-between;font-size:12px;font-weight:900}.inputs small{color:var(--muted);font-size:8px}.inputs input{width:100%;margin-top:5px;padding:7px;border:0;border-radius:7px;background:#fff;color:var(--ink);font-size:12px;font-weight:750;outline:0}.inputs input:focus{box-shadow:0 0 0 2px var(--blue)}.result{display:grid;gap:3px;margin-top:14px;padding:15px;border-radius:16px;background:linear-gradient(120deg,#0b2a4a,#175177);color:#fff}.result small{color:#9fdac0}.result strong{font-size:28px}.result span{color:#c6dce8;font-size:11px}.scenario-tabs{display:flex;gap:6px;margin-top:16px}.scenario-tabs button{padding:9px 12px;border:1px solid var(--line);border-radius:99px;background:#fff;color:var(--muted);font-size:11px;font-weight:900;cursor:pointer}.scenario-tabs button.active{border-color:var(--amber);color:var(--ink);box-shadow:inset 0 -3px var(--amber)}#chart{width:100%;height:auto;margin-top:12px}#chart text{fill:var(--muted);font-size:11px;font-weight:700}.result-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.result-cards button{display:grid;gap:3px;padding:13px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);text-align:left;cursor:pointer}.result-cards button.active{border-color:var(--amber);box-shadow:inset 4px 0 var(--amber)}.result-cards span{font-size:11px;font-weight:900}.result-cards strong{font-size:20px}.result-cards small{color:var(--muted)}.chart-note{color:var(--muted);font-size:11px;line-height:1.5}
+    .formulas{display:grid;grid-template-columns:260px 1fr;gap:24px;margin-top:16px;padding:25px}.formulas .intro p{color:var(--muted);font-size:13px;line-height:1.6}.equations{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.equations article{padding:17px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#f8fbfd,#fff)}.equations article>small{display:block;margin-bottom:10px;color:var(--green);font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}.equation{font-family:Cambria,"Times New Roman",serif;font-size:17px;line-height:2.1}.frac{display:inline-grid;vertical-align:middle;text-align:center;line-height:1.25}.frac i{padding:1px 5px;font-style:normal}.frac i:first-child{border-bottom:1px solid}.conclusion{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;margin-top:16px;padding:28px;background:linear-gradient(130deg,#fff 0 48%,#edf8f3)}.conclusion p{color:var(--muted);line-height:1.65}.geometry{position:relative;min-height:290px;overflow:hidden;border:1px solid #cee3da;border-radius:23px;background:linear-gradient(#fff,#f0faf5)}.geometry:before,.geometry:after{content:"";position:absolute;top:52%;width:47%;border-top:6px solid var(--green)}.geometry:before{left:5%;transform:rotate(-8deg)}.geometry:after{right:5%;border-color:var(--purple);transform:rotate(9deg)}.geometry span{position:absolute;left:50%;bottom:25px;transform:translateX(-50%);padding:10px 15px;border-radius:99px;background:var(--ink);color:#fff;font-size:11px;font-weight:900;white-space:nowrap}.appendix{margin-top:35px}.appendix>h2{text-align:center;font-size:36px}.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.cases article,.guides article{padding:22px}.cases article:nth-child(2){border-color:#f1c76f;background:linear-gradient(145deg,#fff,#fff8e9)}.cases h3,.guides h3{margin:0 0 10px}.cases p,.guides p,.guides li{color:var(--muted);font-size:13px;line-height:1.6}.cases strong{color:var(--green);font-size:10px;text-transform:uppercase;letter-spacing:.07em}.guides{display:grid;grid-template-columns:1fr 1fr .8fr;gap:12px;margin-top:12px}.guides ul{padding-left:18px}.guides li+li{margin-top:7px}.guides .dark{background:linear-gradient(145deg,#0b2a4a,#174d6e);color:#fff}.guides .dark p{color:#d1e2ec}.footer{display:flex;justify-content:space-between;gap:20px;margin:35px 0;padding:22px 4px;border-top:1px solid var(--line);font-size:12px}.footer a{color:var(--muted);font-weight:850;text-decoration:none}
+    @keyframes pulse{to{transform:scale(1.3);opacity:.15}}@keyframes orbit{to{transform:translate(-50%,-50%) rotate(346deg)}}@keyframes fade{from{opacity:0;transform:translateX(15px)}to{opacity:1;transform:none}}
+    @media(max-width:1050px){.portal{grid-template-columns:1fr}.portal-copy{min-height:620px}.workspace{grid-template-columns:310px 1fr}.formulas,.conclusion{grid-template-columns:1fr}.guides{grid-template-columns:1fr 1fr}.guides .dark{grid-column:1/-1}}
+    @media(max-width:740px){.shell{width:min(100% - 18px,1480px);margin-top:9px}.intro-header,.explorer-header{padding:21px 18px}.stage-nav{align-items:stretch;flex-direction:column}.stage-nav>span{display:none}.stage-button,.play-button{width:100%;margin:0}.portal{padding:6px}.portal-visual{min-height:590px}.model{transform:translate(-50%,-50%) scale(.76)}.portal.stage-2 .model{transform:translate(-50%,-50%) scale(.6)}.mini-chart{width:95%;padding:10px}.portal-copy{min-height:650px;padding:28px 20px 20px}.portal-copy h2{font-size:42px}.workspace{grid-template-columns:1fr}.calculator{position:static}.equations,.cases,.guides{grid-template-columns:1fr}.guides .dark{grid-column:auto}.formulas,.conclusion{padding:20px}.result-cards{grid-template-columns:1fr}.footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orbit,.ruby:after{animation:none}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section id="intro">
+      <header class="intro-header card">
+        <p class="eyebrow">Venturi Carpet Technology · Interactive Library</p>
+        <h1>Yellow Target Intro</h1>
+        <p>A three-stage entrance into the living geometry of the cone.</p>
+        <nav class="stage-nav" aria-label="Introduction stages">
+          <button class="stage-button active" data-stage="0">Cone Interface</button><span>→</span>
+          <button class="stage-button" data-stage="1">Ruby Target</button><span>→</span>
+          <button class="stage-button" data-stage="2">Moisture Explorer</button>
+          <button class="play-button" id="playIntro">Play intro</button>
+        </nav>
+      </header>
+      <div class="portal card stage-0" id="portal">
+        <div class="portal-visual">
+          <i class="glow one"></i><i class="glow two"></i>
+          <div class="model"><div class="orbit"></div><div class="ruby"></div><div class="target"><span>TARGET</span></div><div class="cone"><div class="soil"></div><div class="interface"><span>INTERFACE</span></div></div></div>
+          <div class="mini-chart" aria-hidden="true">
+            <svg viewBox="0 0 700 330"><rect x="55" y="25" width="610" height="245" rx="12" fill="rgba(255,255,255,.04)"/><g stroke="rgba(101,232,255,.12)"><path d="M55 86H665M55 147H665M55 208H665M177 25V270M299 25V270M421 25V270M543 25V270"/></g><path d="M55 60 C210 86 350 165 665 245" fill="none" stroke="#16a062" stroke-width="5"/><path d="M55 84 C225 130 360 195 665 252" fill="none" stroke="#2b9fd6" stroke-width="5"/><path d="M55 112 C195 188 390 230 665 258" fill="none" stroke="#9857ba" stroke-width="5"/><path d="M55 185H665" stroke="#f4b63f" stroke-width="2" stroke-dasharray="9 7"/><circle cx="385" cy="185" r="8" fill="#16a062"/><circle cx="315" cy="185" r="8" fill="#2b9fd6"/><circle cx="245" cy="185" r="8" fill="#9857ba"/><text x="55" y="306" fill="#fff" font-size="18">C(s*) = Ccrit</text></svg>
+          </div>
+          <div class="visual-caption" id="visualCaption">Air meets matter</div>
+        </div>
+        <div class="portal-copy" id="portalCopy">
+          <p class="eyebrow" id="stageEyebrow"></p><h2 id="stageTitle"></h2><p id="stageText"></p><div class="logic" id="stageLogic"></div><div class="tags" id="stageTags"></div><div class="progress"><i id="stageProgress"></i></div><button class="primary" id="stageAction"></button><div class="principle"><i></i><p>The cone forms the target — not a storage pocket.</p></div>
+        </div>
+      </div>
+    </section>
 
-      * { box-sizing: border-box; }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        background:
-          radial-gradient(circle at 25% 30%, rgba(140, 98, 255, .28), transparent 28%),
-          radial-gradient(circle at 80% 65%, rgba(101, 232, 255, .2), transparent 30%),
-          var(--night);
-        color: var(--ink);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(101, 232, 255, .06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(101, 232, 255, .06) 1px, transparent 1px);
-        background-size: 42px 42px;
-        mask-image: linear-gradient(to bottom, black, transparent 88%);
-      }
-
-      main {
-        position: relative;
-        width: min(820px, calc(100% - 32px));
-        padding: clamp(32px, 7vw, 72px);
-        text-align: center;
-        border: 1px solid rgba(101, 232, 255, .24);
-        border-radius: 28px;
-        background: rgba(7, 24, 39, .76);
-        box-shadow: 0 30px 100px rgba(0, 0, 0, .42), inset 0 0 55px rgba(101, 232, 255, .04);
-        backdrop-filter: blur(18px);
-      }
-
-      .ruby {
-        width: 62px;
-        height: 62px;
-        margin: 0 auto 34px;
-        transform: rotate(45deg);
-        border: 2px solid rgba(255, 255, 255, .82);
-        background: linear-gradient(135deg, #fff, var(--pink) 28%, var(--violet) 63%, var(--amber));
-        box-shadow: 0 0 32px rgba(255, 94, 168, .65), 0 0 70px rgba(140, 98, 255, .35);
-        animation: float 2.4s ease-in-out infinite alternate;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(44px, 9vw, 86px);
-        line-height: .92;
-        letter-spacing: -.065em;
-      }
-
-      p {
-        max-width: 600px;
-        margin: 24px auto 0;
-        color: #a9c1d2;
-        font-size: clamp(15px, 2.5vw, 19px);
-        line-height: 1.65;
-      }
-
-      a {
-        display: inline-block;
-        margin-top: 32px;
-        padding: 17px 28px;
-        border-radius: 14px;
-        background: linear-gradient(110deg, var(--violet), var(--pink) 58%, var(--amber));
-        color: white;
-        text-decoration: none;
-        font-weight: 800;
-        box-shadow: 0 14px 34px rgba(140, 98, 255, .28);
-      }
-
-      .path {
-        margin-top: 28px;
-        color: var(--green);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
-
-      @keyframes float {
-        to { transform: translateY(-12px) rotate(45deg); }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .ruby { animation: none; }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div class="ruby" aria-hidden="true"></div>
-      <h1>Yellow Target Intro</h1>
-      <p>Enter the living model of the cone interface, moisture gradient and pruning point.</p>
-      <div class="path">Cone Interface · Ruby Target · Moisture Explorer</div>
-      <a href="https://yellow-target-explorer.nicknickk555.chatgpt.site">Open the interactive model</a>
-    </main>
-    <script>
-      window.setTimeout(function () {
-        window.location.replace("https://yellow-target-explorer.nicknickk555.chatgpt.site");
-      }, 900);
-    </script>
-  </body>
+    <section id="explorer" class="explorer">
+      <header class="explorer-header card"><a class="muted" href="#intro">Yellow Target Intro</a><p class="eyebrow" style="margin-top:18px">Venturi Carpet Technology · Interactive Library</p><h1>Moisture Gradient &amp; Pruning Point</h1><p>Model, calculator, mathematical conclusion and practical appendix in one continuous workspace.</p><nav class="explorer-nav"><a href="#model">Model</a><a href="#formulas">Formulas</a><a href="#conclusion">Conclusion</a><a href="#appendix">Appendix</a></nav></header>
+      <div class="workspace" id="model">
+        <aside class="calculator card"><h2>Calculator</h2>
+          <fieldset><legend>Geometry &amp; transfer</legend><div class="inputs"><label><span>L <small>mm</small></span><input id="L" type="number" value="20" step="any"></label><label><span>k<sub>g</sub> <small>m/s</small></span><input id="kg" type="number" value="0.001" step="any"></label><label><span>A<sub>h</sub> <small>m²</small></span><input id="Ah" type="number" value="1" step="any"></label></div></fieldset>
+          <fieldset><legend>Concentration</legend><div class="inputs"><label><span>C(0) <small>kg/m³</small></span><input id="C0" type="number" value="0.02" step="any"></label><label><span>C∞ <small>kg/m³</small></span><input id="Cinf" type="number" value="0.005" step="any"></label><label><span>C<sub>crit</sub> <small>kg/m³</small></span><input id="Ccrit" type="number" value="0.01" step="any"></label></div></fieldset>
+          <fieldset><legend>Compost &amp; air</legend><div class="inputs"><label><span>D<sub>p</sub> <small>m²/s</small></span><input id="Dp" type="number" value="0.000002" step="any"></label><label><span>D<sub>a</sub><sup>eff</sup> <small>m²/s</small></span><input id="Da" type="number" value="0.00001" step="any"></label><label><span>A<sub>p</sub> <small>m²</small></span><input id="Ap" type="number" value="1" step="any"></label><label><span>A<sub>a</sub> <small>m²</small></span><input id="Aa" type="number" value="1" step="any"></label></div></fieldset>
+          <div class="result"><small id="resultLabel"></small><strong id="resultValue"></strong><span id="resultDetail"></span></div>
+        </aside>
+        <section class="graph card"><h2>Moisture gradient and pruning point</h2><div class="scenario-tabs"><button class="active" data-fill="0">0% fill</button><button data-fill="0.5">50% fill</button><button data-fill="0.75">75% fill</button></div>
+          <svg id="chart" viewBox="0 0 900 380" role="img" aria-label="Moisture gradient curves and pruning points"><rect x="72" y="30" width="800" height="286" rx="12" fill="#f5faf9"/><g stroke="#dce8ef"><path d="M72 101.5H872M72 173H872M72 244.5H872M272 30V316M472 30V316M672 30V316"/></g><path d="M72 173H872" stroke="#ed851e" stroke-width="2" stroke-dasharray="8 7" id="threshold"/><text x="82" y="160" fill="#d66f0a" id="thresholdLabel"></text><polyline id="curve0" fill="none" stroke="#16a062" stroke-width="4" stroke-linecap="round"/><polyline id="curve1" fill="none" stroke="#2b9fd6" stroke-width="4" stroke-linecap="round"/><polyline id="curve2" fill="none" stroke="#9857ba" stroke-width="4" stroke-linecap="round"/><circle id="marker0" r="7" fill="#16a062" stroke="#fff" stroke-width="3"/><circle id="marker1" r="7" fill="#2b9fd6" stroke="#fff" stroke-width="3"/><circle id="marker2" r="7" fill="#9857ba" stroke="#fff" stroke-width="3"/><path d="M72 30V316H872" fill="none" stroke="#173958" stroke-width="2"/><text x="872" y="348" text-anchor="end">s (mm)</text><text x="22" y="180" transform="rotate(-90 22 180)" text-anchor="middle">C(s)</text></svg>
+          <div class="result-cards"><button class="active" data-result="0"><span>0% fill</span><strong id="card0"></strong><small id="region0"></small></button><button data-result="0.5"><span>50% fill</span><strong id="card1"></strong><small id="region1"></small></button><button data-result="0.75"><span>75% fill</span><strong id="card2"></strong><small id="region2"></small></button></div><p class="chart-note">The dashed threshold is C<sub>crit</sub>. Each dot marks the point where C(s*) = C<sub>crit</sub>.</p>
+        </section>
+      </div>
+      <section id="formulas" class="formulas card"><div class="intro"><h2>Resistance balance &amp; root cutoff</h2><p>The same flux J passes through porous compost, the air gap and the external transfer layer.</p></div><div class="equations">
+        <article><small>Resistances</small><div class="equation">R<sub>p</sub> = <span class="frac"><i>ℓ<sub>f</sub></i><i>D<sub>p</sub>A<sub>p</sub></i></span>&nbsp; R<sub>a</sub> = <span class="frac"><i>L−ℓ<sub>f</sub></i><i>D<sub>a</sub><sup>eff</sup>A<sub>a</sub></i></span>&nbsp; R<sub>h</sub> = <span class="frac"><i>1</i><i>k<sub>g</sub>A<sub>h</sub></i></span></div></article>
+        <article><small>Total flow</small><div class="equation">R<sub>tot</sub> = R<sub>p</sub> + R<sub>a</sub> + R<sub>h</sub><br>J = <span class="frac"><i>C(0) − C<sub>∞</sub></i><i>R<sub>tot</sub></i></span></div></article>
+        <article><small>Inside compost</small><div class="equation">s* = <span class="frac"><i>[C(0) − C<sub>crit</sub>]D<sub>p</sub>A<sub>p</sub></i><i>J</i></span>, &nbsp;s* ≤ ℓ<sub>f</sub></div></article>
+        <article><small>Inside air gap</small><div class="equation">s* = ℓ<sub>f</sub> + <span class="frac"><i>[C(0) − C<sub>crit</sub> − JR<sub>p</sub>]D<sub>a</sub><sup>eff</sup>A<sub>a</sub></i><i>J</i></span></div></article>
+      </div></section>
+      <section id="conclusion" class="conclusion card"><div><h2>Geometry reshapes resistance.<br>Venturi flow decides pruning.</h2><p>A near-horizontal shelf increases fill length ℓ<sub>f</sub> and porous resistance R<sub>p</sub>. Narrowing accelerates airflow, increasing k<sub>g</sub> and D<sub>a</sub><sup>eff</sup>, while reducing R<sub>a</sub> and R<sub>h</sub>.</p><div class="equation">Sh = <span class="frac"><i>k<sub>g</sub>ℓ</i><i>D<sub>a</sub></i></span> ∼ a·Re<sup>m</sup>·Sc<sup>1/3</sup><br>u<sub>eff</sub> ≈ <span class="frac"><i>u<sub>0</sub></i><i>cos θ</i></span></div></div><div class="geometry"><span>usable balance makes s* predictable</span></div></section>
+      <section id="appendix" class="appendix"><h2>Influence of geometry &amp; practical guidelines</h2><div class="cases"><article class="card"><h3>Empty cone</h3><p>R<sub>p</sub> = 0 and J is maximal. Concentration falls sharply through air; pruning is early and hard.</p><strong>early · sharp · intense branching</strong></article><article class="card"><h3>Half-filled cone</h3><p>R<sub>p</sub>, R<sub>a</sub> and R<sub>h</sub> balance. The gradient softens and s* stays near the interface.</p><strong>balanced · optimal · readable</strong></article><article class="card"><h3>Three-quarter fill</h3><p>R<sub>p</sub> dominates and J decreases. Moisture remains high longer; pruning shifts outward.</p><strong>delayed · soft · smooth transition</strong></article></div><div class="guides"><article class="card"><h3>Practical guidelines</h3><ul><li>Aim for approximately 50% fill and let gravity settle the mix.</li><li>Use a friable, airy texture and avoid excess fines.</li><li>Maintain gentle crossflow and keep the aperture clear.</li><li>Look for soft branching around the cone midsection.</li></ul></article><article class="card"><h3>When to deviate</h3><ul><li>Dry ambient: increase fill toward 60%.</li><li>Humid ambient: reduce fill to 20–30%.</li><li>Sensitive species: prefer 40–60% fill.</li><li>Avoid 75%+ for standard use.</li></ul></article><article class="card dark"><h3>Quick field check</h3><p>If the cone wall feels damp beyond mid-height, reduce fill next cycle.</p><p>White, bushy laterals inside the cone indicate the optimal band.</p></article></div></section>
+      <footer class="footer"><span>Venturi Carpet Technology</span><strong>The cone forms the target.</strong><a href="#intro">Back to intro</a></footer>
+    </section>
+  </main>
+  <script>
+    const stages=[
+      {eyebrow:"The programmed interface begins here",title:"The cone is not a pocket. It is an interface.",text:"The outer cone creates a live boundary where compost contact, air access and drying potential meet. Before a root arrives, geometry has already shaped its future path.",logic:"I_cone = compost contact + air gap + drying gradient",tags:["air-side signal","porous contact","future pruning band"],action:"Activate Ruby Target",caption:"Air meets matter"},
+      {eyebrow:"50% interface · working biological target",title:"Partial fill creates the working target.",text:"At partial fill, compost contact, airflow and drying potential enter a readable balance. The ruby appears before physical contact: a signal that the target is ready for the root.",logic:"partial fill → interface balance → usable ruby target",tags:["50% working zone","target readability","no full-fill requirement"],action:"Open Moisture Portal",caption:"The target switches on"},
+      {eyebrow:"The curves are ready",title:"The model is ready to enter.",text:"The target becomes measurable. Follow three moisture curves, change physical parameters and see the pruning point s* move in real time.",logic:"target quality → moisture gradient → predictable s*",tags:["three scenarios","interactive calculator","instant pruning point"],action:"Enter the Explorer",caption:"The threshold becomes visible"}
+    ];
+    let stage=0,playing=false,activeFill=0;
+    const portal=document.getElementById("portal");
+    function setStage(index){stage=index;portal.className="portal card stage-"+index;document.querySelectorAll(".stage-button").forEach((button,i)=>button.classList.toggle("active",i===index));const item=stages[index];document.getElementById("stageEyebrow").textContent=item.eyebrow;document.getElementById("stageTitle").textContent=item.title;document.getElementById("stageText").textContent=item.text;document.getElementById("stageLogic").textContent=item.logic;document.getElementById("stageTags").innerHTML=item.tags.map(tag=>"<span>"+tag+"</span>").join("");document.getElementById("stageProgress").style.width=((index+1)/3*100)+"%";document.getElementById("visualCaption").textContent=item.caption;const action=document.getElementById("stageAction");action.textContent=item.action;action.classList.toggle("final",index===2);action.onclick=()=>index<2?setStage(index+1):document.getElementById("explorer").scrollIntoView({behavior:"smooth"});}
+    document.querySelectorAll(".stage-button").forEach(button=>button.addEventListener("click",()=>setStage(Number(button.dataset.stage))));document.getElementById("playIntro").addEventListener("click",()=>{if(playing)return;playing=true;setStage(0);let i=1;const timer=setInterval(()=>{if(i>2){clearInterval(timer);playing=false;return}setStage(i++);},1400)});setStage(0);
+    const ids=["L","kg","Ah","C0","Cinf","Ccrit","Dp","Da","Ap","Aa"],colors=["#16a062","#2b9fd6","#9857ba"],fills=[0,.5,.75];
+    function values(){const p={};ids.forEach(id=>p[id]=Number(document.getElementById(id).value)||0);return p}
+    function scenarios(p){return fills.map(fill=>{const L=Math.max(p.L,.001),lf=fill*L,Rp=lf>0?lf/Math.max(p.Dp*p.Ap,1e-12):0,Ra=(L-lf)/Math.max(p.Da*p.Aa,1e-12),Rh=1/Math.max(p.kg*p.Ah,1e-12),Rtot=Rp+Ra+Rh,J=(p.C0-p.Cinf)/Math.max(Rtot,1e-12),candidate=(p.C0-p.Ccrit)*p.Dp*p.Ap/Math.max(J,1e-12),raw=candidate<=lf?candidate:lf+(p.C0-p.Ccrit-J*Rp)*p.Da*p.Aa/Math.max(J,1e-12),sstar=Math.min(L,Math.max(0,raw)),region=raw<0?"before inlet":raw>L?"beyond outlet":sstar<=lf&&lf>0?"in compost":"in air gap",points=Array.from({length:61},(_,i)=>{const s=i/60*L,C=s<=lf&&lf>0?p.C0-J/Math.max(p.Dp*p.Ap,1e-12)*s:(p.C0-J*Rp)-J/Math.max(p.Da*p.Aa,1e-12)*(s-lf);return{s,C}});return{fill,L,lf,Rp,Ra,Rh,J,sstar,region,points}})}
+    function render(){const p=values(),data=scenarios(p),left=72,top=30,w=800,h=286,maxC=Math.max(p.C0,p.Ccrit)*1.08,minC=Math.min(p.Cinf,p.Ccrit)*.78,x=s=>left+s/Math.max(p.L,.001)*w,y=c=>top+(maxC-c)/Math.max(maxC-minC,1e-12)*h,thresholdY=y(p.Ccrit);document.getElementById("threshold").setAttribute("d",`M${left} ${thresholdY}H${left+w}`);document.getElementById("thresholdLabel").setAttribute("y",thresholdY-9);document.getElementById("thresholdLabel").textContent="Ccrit = "+p.Ccrit;data.forEach((item,i)=>{document.getElementById("curve"+i).setAttribute("points",item.points.map(point=>x(point.s).toFixed(1)+","+y(point.C).toFixed(1)).join(" "));const marker=document.getElementById("marker"+i);marker.setAttribute("cx",x(item.sstar));marker.setAttribute("cy",thresholdY);document.getElementById("card"+i).textContent=item.sstar.toFixed(2)+" mm";document.getElementById("region"+i).textContent=item.region;const focus=item.fill===activeFill;document.getElementById("curve"+i).setAttribute("opacity",focus?1:.42);marker.setAttribute("opacity",focus?1:.55)});const active=data.find(item=>item.fill===activeFill)||data[0];document.getElementById("resultLabel").textContent=Math.round(active.fill*100)+"% fill";document.getElementById("resultValue").textContent="s* = "+active.sstar.toFixed(2)+" mm";document.getElementById("resultDetail").textContent=active.region+" · J = "+active.J.toExponential(3);document.querySelectorAll(".scenario-tabs button").forEach(button=>button.classList.toggle("active",Number(button.dataset.fill)===activeFill));document.querySelectorAll(".result-cards button").forEach(button=>button.classList.toggle("active",Number(button.dataset.result)===activeFill))}
+    ids.forEach(id=>document.getElementById(id).addEventListener("input",render));document.querySelectorAll("[data-fill],[data-result]").forEach(button=>button.addEventListener("click",()=>{activeFill=Number(button.dataset.fill??button.dataset.result);render()}));render();
+  </script>
+</body>
 </html>

@@ -9,8 +9,8 @@ pruning points.
 - [Interactive Yellow Target site](https://yellow-target-explorer.nicknickk555.chatgpt.site)
 - [GitHub Pages entrance](https://nicknickk555.github.io/mogra/)
 
-The GitHub Pages entrance uses the root [`index.html`](./index.html) and opens
-the complete interactive model.
+The root [`index.html`](./index.html) contains a standalone GitHub Pages version
+of both screens, including the live calculator and moisture-gradient chart.
 
 ## What is included
 
