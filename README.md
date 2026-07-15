@@ -9,8 +9,12 @@ pruning points.
 - [Interactive Yellow Target site](https://yellow-target-explorer.nicknickk555.chatgpt.site)
 - [GitHub Pages entrance](https://nicknickk555.github.io/mogra/)
 
-The root [`index.html`](./index.html) contains a standalone GitHub Pages version
-of both screens, including the live calculator and moisture-gradient chart.
+GitHub Pages keeps the experience as two separate screens:
+
+- [`index.html`](./index.html) is the animated Yellow Target cover and entrance portal.
+- [`explorer.html`](./explorer.html) is the interactive mathematical explorer.
+
+The portal opens the second screen directly inside the same GitHub Pages site.
 
 ## What is included
 
@@ -42,7 +46,9 @@ pnpm run build
 - `app/page.tsx` — Yellow Target Intro.
 - `app/explorer/page.tsx` — mathematical explorer and calculator.
 - `app/components/MoistureChart.tsx` — live gradient model and chart.
-- `index.html` — GitHub Pages entrance.
+- `index.html` — animated GitHub Pages cover and Screen 1.
+- `explorer.html` — interactive GitHub Pages Screen 2.
+- `pages.css`, `intro.js`, `explorer.js` — shared presentation and motion.
 
 ---
 
