@@ -25,18 +25,17 @@ export default function ExplorerPage() {
     <main className="site-shell explorer-screen">
       <header className="explorer-header panel">
         <div>
-          <Link href="/" className="back-link">← Yellow Target Intro</Link>
+          <Link href="/" className="back-link">Yellow Target Intro</Link>
           <p className="eyebrow">Venturi Carpet Technology · Interactive Library</p>
           <h1>Moisture Gradient &amp; Pruning Point</h1>
           <p className="lede">One continuous workspace: model, live calculator, main conclusion and practical appendix.</p>
         </div>
-        <div className="page-stamp"><strong>EXPLORER</strong><span>Pages 22–25</span></div>
         <nav className="section-nav" aria-label="Page sections"><a href="#model">Model</a><a href="#conclusion">Conclusion</a><a href="#appendix">Appendix</a></nav>
       </header>
 
       <section id="model" className="workspace-grid">
         <aside className="calculator panel">
-          <div className="section-kicker"><strong>Live calculator</strong><span>updates instantly</span></div>
+          <h2 className="calculator-title">Calculator</h2>
           {fieldGroups.map((group) => <fieldset key={group.title}>
             <legend>{group.title}</legend>
             <div className="input-grid">
@@ -56,7 +55,7 @@ export default function ExplorerPage() {
 
         <div className="graph-panel panel">
           <div className="graph-head">
-            <div><p className="eyebrow">Page 24 · live model</p><h2>Moisture gradient and pruning point</h2></div>
+            <div><h2>Moisture gradient and pruning point</h2></div>
             <div className="scenario-tabs" role="tablist" aria-label="Fill scenario">
               {results.map((item, index) => <button key={item.fill} onClick={() => setActiveFill(item.fill)} className={activeFill === item.fill ? "active" : ""} style={{"--scenario": ["#16a062", "#2e9bd3", "#9557bd"][index]} as React.CSSProperties}>{Math.round(item.fill * 100)}% fill</button>)}
             </div>
@@ -72,7 +71,7 @@ export default function ExplorerPage() {
       </section>
 
       <section className="formula-band panel" aria-labelledby="equations-title">
-        <div className="formula-intro"><p className="eyebrow">Pages 22–23</p><h2 id="equations-title">Resistance balance &amp; root cutoff</h2><p>The same flux J passes through porous compost, the air gap and the external transfer layer.</p></div>
+        <div className="formula-intro"><h2 id="equations-title">Resistance balance &amp; root cutoff</h2><p>The same flux J passes through porous compost, the air gap and the external transfer layer.</p></div>
         <div className="equation-grid">
           <article><small>Resistances</small><div className="equation">R<sub>p</sub> = <span className="frac"><i>ℓ<sub>f</sub></i><i>D<sub>p</sub>A<sub>p</sub></i></span>&nbsp; R<sub>a</sub> = <span className="frac"><i>L−ℓ<sub>f</sub></i><i>D<sub>a</sub><sup>eff</sup>A<sub>a</sub></i></span>&nbsp; R<sub>h</sub> = <span className="frac"><i>1</i><i>k<sub>g</sub>A<sub>h</sub></i></span></div></article>
           <article><small>Total flow</small><div className="equation">R<sub>tot</sub> = R<sub>p</sub> + R<sub>a</sub> + R<sub>h</sub><br/>J = <span className="frac"><i>C(0) − C<sub>∞</sub></i><i>R<sub>tot</sub></i></span></div></article>
@@ -82,7 +81,7 @@ export default function ExplorerPage() {
       </section>
 
       <section id="conclusion" className="conclusion panel">
-        <div className="conclusion-copy"><p className="eyebrow">Page 25 · main conclusion</p><h2>Geometry reshapes resistance.<br/>Venturi flow decides pruning.</h2><p>A near-horizontal shelf increases fill length ℓ<sub>f</sub> and porous resistance R<sub>p</sub>. The narrowing accelerates airflow, increasing k<sub>g</sub> and D<sub>a</sub><sup>eff</sup>, while reducing R<sub>a</sub> and R<sub>h</sub>.</p><div className="equation conclusion-equation">Sh = <span className="frac"><i>k<sub>g</sub>ℓ</i><i>D<sub>a</sub></i></span> ∼ a·Re<sup>m</sup>·Sc<sup>1/3</sup><br/>u<sub>eff</sub> ≈ <span className="frac"><i>u<sub>0</sub></i><i>cos θ</i></span></div></div>
+        <div className="conclusion-copy"><h2>Geometry reshapes resistance.<br/>Venturi flow decides pruning.</h2><p>A near-horizontal shelf increases fill length ℓ<sub>f</sub> and porous resistance R<sub>p</sub>. The narrowing accelerates airflow, increasing k<sub>g</sub> and D<sub>a</sub><sup>eff</sup>, while reducing R<sub>a</sub> and R<sub>h</sub>.</p><div className="equation conclusion-equation">Sh = <span className="frac"><i>k<sub>g</sub>ℓ</i><i>D<sub>a</sub></i></span> ∼ a·Re<sup>m</sup>·Sc<sup>1/3</sup><br/>u<sub>eff</sub> ≈ <span className="frac"><i>u<sub>0</sub></i><i>cos θ</i></span></div></div>
         <div className="geometry-diagram" aria-label="Animated geometry influence diagram">
           <div className="shelf-label">Shelf → ℓ<sub>f</sub> ↑ · R<sub>p</sub> ↑</div>
           <div className="venturi-label">Venturi → u<sub>eff</sub> ↑ · R<sub>a</sub>, R<sub>h</sub> ↓</div>
@@ -92,7 +91,7 @@ export default function ExplorerPage() {
       </section>
 
       <section id="appendix" className="appendix-section">
-        <div className="section-title"><p className="eyebrow">Appendix · integrated</p><h2>Influence of geometry &amp; practical guidelines</h2></div>
+        <div className="section-title"><h2>Influence of geometry &amp; practical guidelines</h2></div>
         <div className="appendix-grid">
           <article className="panel"><span className="number">01</span><h3>Empty cone · f = 0</h3><p>R<sub>p</sub> = 0 and J is maximal. The concentration falls sharply through air; pruning is early and hard, close to the cone base.</p><strong>early · sharp · intense branching</strong></article>
           <article className="panel featured"><span className="number">02</span><h3>Half-filled · f = 0.5</h3><p>R<sub>p</sub>, R<sub>a</sub> and R<sub>h</sub> balance. The gradient softens and s* stays near the compost–air interface.</p><strong>balanced · optimal · readable</strong></article>
@@ -105,7 +104,7 @@ export default function ExplorerPage() {
         </div>
       </section>
 
-      <footer className="site-footer"><span>Venturi Carpet Technology</span><strong>The cone forms the target.</strong><Link href="/">Back to intro ↑</Link></footer>
+      <footer className="site-footer"><span>Venturi Carpet Technology</span><strong>The cone forms the target.</strong><Link href="/">Back to intro</Link></footer>
     </main>
   );
 }
