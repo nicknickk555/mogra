@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: base,
     title: "Yellow Target · Moisture Gradient Explorer",
     description: "Interactive Venturi Carpet Technology model for moisture gradients, cone fill and root pruning points.",
-    openGraph: { title: "The cone forms the target", description: "Explore how partial fill, airflow and geometry define the root pruning point.", images: [{ url: "/og.png", width: 1200, height: 630 }] },
-    twitter: { card: "summary_large_image", title: "Yellow Target · Moisture Gradient Explorer", description: "Partial fill creates the working biological target.", images: ["/og.png"] },
+    openGraph: { title: "Yellow Target Intro · Enter the living model", description: "Cone Interface → Ruby Target → Moisture Explorer.", images: [{ url: "/og-v2.png", width: 1200, height: 630 }] },
+    twitter: { card: "summary_large_image", title: "Yellow Target Intro · Enter the living model", description: "A three-stage portal into the live moisture model.", images: ["/og-v2.png"] },
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   };
 }
