@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive moisture-gradient model and pruning-point calculator.">
+  <meta name="theme-color" content="#f2f6f9">
+  <meta property="og:title" content="Moisture Gradient & Pruning Point">
+  <meta property="og:description" content="A living mathematical model of moisture gradients and root pruning.">
+  <meta property="og:image" content="https://nicknickk555.github.io/mogra/public/og-v2.png">
+  <title>Moisture Gradient &amp; Pruning Point</title>
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="explorer-page">
+  <main class="shell">
+    <header class="explorer-header card">
+      <a class="back-link" href="index.html">← Yellow Target Intro</a>
+      <p class="eyebrow">Venturi Carpet Technology · Interactive Library</p>
+      <h1>Moisture Gradient &amp; Pruning Point</h1>
+      <p>Model, calculator, mathematical conclusion and practical appendix in one continuous workspace.</p>
+      <nav class="explorer-nav" aria-label="Explorer sections">
+        <a href="#model">Model</a><a href="#formulas">Formulas</a><a href="#conclusion">Conclusion</a><a href="#appendix">Appendix</a>
+      </nav>
+    </header>
+
+    <div class="workspace" id="model">
+      <aside class="calculator card">
+        <h2>Calculator</h2>
+        <fieldset>
+          <legend>Geometry &amp; transfer</legend>
+          <div class="inputs">
+            <label><span>L <small>mm</small></span><input id="L" type="number" value="20" step="any"></label>
+            <label><span>k<sub>g</sub> <small>m/s</small></span><input id="kg" type="number" value="0.001" step="any"></label>
+            <label><span>A<sub>h</sub> <small>m²</small></span><input id="Ah" type="number" value="1" step="any"></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Concentration</legend>
+          <div class="inputs">
+            <label><span>C(0) <small>kg/m³</small></span><input id="C0" type="number" value="0.02" step="any"></label>
+            <label><span>C∞ <small>kg/m³</small></span><input id="Cinf" type="number" value="0.005" step="any"></label>
+            <label><span>C<sub>crit</sub> <small>kg/m³</small></span><input id="Ccrit" type="number" value="0.01" step="any"></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Compost &amp; air</legend>
+          <div class="inputs">
+            <label><span>D<sub>p</sub> <small>m²/s</small></span><input id="Dp" type="number" value="0.000002" step="any"></label>
+            <label><span>D<sub>a</sub><sup>eff</sup> <small>m²/s</small></span><input id="Da" type="number" value="0.00001" step="any"></label>
+            <label><span>A<sub>p</sub> <small>m²</small></span><input id="Ap" type="number" value="1" step="any"></label>
+            <label><span>A<sub>a</sub> <small>m²</small></span><input id="Aa" type="number" value="1" step="any"></label>
+          </div>
+        </fieldset>
+        <div class="result"><small id="resultLabel"></small><strong id="resultValue"></strong><span id="resultDetail"></span></div>
+      </aside>
+
+      <section class="graph card">
+        <h2>Moisture gradient and pruning point</h2>
+        <div class="scenario-tabs">
+          <button class="active" data-fill="0" type="button">0% fill</button>
+          <button data-fill="0.5" type="button">50% fill</button>
+          <button data-fill="0.75" type="button">75% fill</button>
+        </div>
+        <svg id="chart" viewBox="0 0 900 380" role="img" aria-label="Moisture gradient curves and pruning points">
+          <rect x="72" y="30" width="800" height="286" rx="12" fill="#f5faf9"/>
+          <g stroke="#dce8ef"><path d="M72 101.5H872M72 173H872M72 244.5H872M272 30V316M472 30V316M672 30V316"/></g>
+          <path id="threshold" d="M72 173H872" stroke="#ed851e" stroke-width="2" stroke-dasharray="8 7"/>
+          <text id="thresholdLabel" x="82" y="160" fill="#d66f0a"></text>
+          <polyline id="curve0" class="live-curve" fill="none" stroke="#16a062" stroke-width="4" stroke-linecap="round"/>
+          <polyline id="curve1" class="live-curve" fill="none" stroke="#2b9fd6" stroke-width="4" stroke-linecap="round"/>
+          <polyline id="curve2" class="live-curve" fill="none" stroke="#9857ba" stroke-width="4" stroke-linecap="round"/>
+          <circle id="marker0" class="live-marker" r="7" fill="#16a062" stroke="#fff" stroke-width="3"/>
+          <circle id="marker1" class="live-marker" r="7" fill="#2b9fd6" stroke="#fff" stroke-width="3"/>
+          <circle id="marker2" class="live-marker" r="7" fill="#9857ba" stroke="#fff" stroke-width="3"/>
+          <path d="M72 30V316H872" fill="none" stroke="#173958" stroke-width="2"/>
+          <text x="872" y="348" text-anchor="end">s (mm)</text>
+          <text x="22" y="180" transform="rotate(-90 22 180)" text-anchor="middle">C(s)</text>
+        </svg>
+        <div class="result-cards">
+          <button class="active" data-result="0" type="button"><span>0% fill</span><strong id="card0"></strong><small id="region0"></small></button>
+          <button data-result="0.5" type="button"><span>50% fill</span><strong id="card1"></strong><small id="region1"></small></button>
+          <button data-result="0.75" type="button"><span>75% fill</span><strong id="card2"></strong><small id="region2"></small></button>
+        </div>
+        <p class="chart-note">The dashed threshold is C<sub>crit</sub>. Each dot marks the point where C(s*) = C<sub>crit</sub>.</p>
+      </section>
+    </div>
+
+    <section id="formulas" class="formulas card">
+      <div class="section-intro"><h2>Resistance balance &amp; root cutoff</h2><p>The same flux J passes through porous compost, the air gap and the external transfer layer.</p></div>
+      <div class="equations">
+        <article><small>Resistances</small><div class="equation">R<sub>p</sub> = <span class="frac"><i>ℓ<sub>f</sub></i><i>D<sub>p</sub>A<sub>p</sub></i></span>&nbsp; R<sub>a</sub> = <span class="frac"><i>L−ℓ<sub>f</sub></i><i>D<sub>a</sub><sup>eff</sup>A<sub>a</sub></i></span>&nbsp; R<sub>h</sub> = <span class="frac"><i>1</i><i>k<sub>g</sub>A<sub>h</sub></i></span></div></article>
+        <article><small>Total flow</small><div class="equation">R<sub>tot</sub> = R<sub>p</sub> + R<sub>a</sub> + R<sub>h</sub><br>J = <span class="frac"><i>C(0) − C<sub>∞</sub></i><i>R<sub>tot</sub></i></span></div></article>
+        <article><small>Inside compost</small><div class="equation">s* = <span class="frac"><i>[C(0) − C<sub>crit</sub>]D<sub>p</sub>A<sub>p</sub></i><i>J</i></span>, &nbsp;s* ≤ ℓ<sub>f</sub></div></article>
+        <article><small>Inside air gap</small><div class="equation">s* = ℓ<sub>f</sub> + <span class="frac"><i>[C(0) − C<sub>crit</sub> − JR<sub>p</sub>]D<sub>a</sub><sup>eff</sup>A<sub>a</sub></i><i>J</i></span></div></article>
+      </div>
+    </section>
+
+    <section id="conclusion" class="conclusion card">
+      <div>
+        <h2>Geometry reshapes resistance.<br>Venturi flow decides pruning.</h2>
+        <p>A near-horizontal shelf increases fill length ℓ<sub>f</sub> and porous resistance R<sub>p</sub>. Narrowing accelerates airflow, increasing k<sub>g</sub> and D<sub>a</sub><sup>eff</sup>, while reducing R<sub>a</sub> and R<sub>h</sub>.</p>
+        <div class="equation">Sh = <span class="frac"><i>k<sub>g</sub>ℓ</i><i>D<sub>a</sub></i></span> ∼ a·Re<sup>m</sup>·Sc<sup>1/3</sup><br>u<sub>eff</sub> ≈ <span class="frac"><i>u<sub>0</sub></i><i>cos θ</i></span></div>
+      </div>
+      <div class="geometry" aria-label="Animated balance between shelf geometry and Venturi airflow">
+        <i class="shelf-line"></i><i class="venturi-line"></i><i class="air-arc"></i><b class="balance-dot"></b>
+        <span>usable balance makes s* predictable</span>
+      </div>
+    </section>
+
+    <section id="appendix" class="appendix">
+      <h2>Influence of geometry &amp; practical guidelines</h2>
+      <div class="cases">
+        <article class="card"><h3>Empty cone</h3><p>R<sub>p</sub> = 0 and J is maximal. Concentration falls sharply through air; pruning is early and hard.</p><strong>early · sharp · intense branching</strong></article>
+        <article class="card"><h3>Half-filled cone</h3><p>R<sub>p</sub>, R<sub>a</sub> and R<sub>h</sub> balance. The gradient softens and s* stays near the interface.</p><strong>balanced · optimal · readable</strong></article>
+        <article class="card"><h3>Three-quarter fill</h3><p>R<sub>p</sub> dominates and J decreases. Moisture remains high longer; pruning shifts outward.</p><strong>delayed · soft · smooth transition</strong></article>
+      </div>
+      <div class="guides">
+        <article class="card"><h3>Practical guidelines</h3><ul><li>Aim for approximately 50% fill and let gravity settle the mix.</li><li>Use a friable, airy texture and avoid excess fines.</li><li>Maintain gentle crossflow and keep the aperture clear.</li><li>Look for soft branching around the cone midsection.</li></ul></article>
+        <article class="card"><h3>When to deviate</h3><ul><li>Dry ambient: increase fill toward 60%.</li><li>Humid ambient: reduce fill to 20–30%.</li><li>Sensitive species: prefer 40–60% fill.</li><li>Avoid 75%+ for standard use.</li></ul></article>
+        <article class="card dark"><h3>Quick field check</h3><p>If the cone wall feels damp beyond mid-height, reduce fill next cycle.</p><p>White, bushy laterals inside the cone indicate the optimal band.</p></article>
+      </div>
+    </section>
+
+    <footer class="footer"><span>Venturi Carpet Technology</span><strong>The cone forms the target.</strong><a href="index.html">Back to intro</a></footer>
+  </main>
+  <script src="explorer.js"></script>
+</body>
+</html>
